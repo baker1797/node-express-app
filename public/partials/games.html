@@ -1,0 +1,31 @@
+<section>
+	<input type="text" ng-model="link.model" ng-repeat="link in nav">
+
+
+	<div ng-repeat="team in teams">
+		<img ng-src="{{team.logo}}" style="display: inline-block; padding: 0 5px; float: left; height: 30px;">
+	</div>
+
+	<div style="clear:both; padding-top: 20px;">
+		<label for="gamesSearch">Search for a team:</label>
+		<input name="gamesSearch" type="text" ng-model="gamesQuery"><br>
+		<label for="gamesSearch">Search for a second team:</label>
+		<input name="gamesSearch" type="text" ng-model="gamesQuery2"><br>
+
+		<img id="spinner" src="http://img1.targetimg1.com/wcsstore/TargetSAS/04_09_2015_02_56/images/spinner-small.gif">
+		<br>
+		<div ng-repeat="event in games | filter:gamesQuery | filter:gamesQuery2">
+			<h3>{{event.region}}</h3>
+			<ul>
+				<li ng-repeat="round in event.rounds | filter:gamesQuery | filter:gamesQuery2">
+					{{round.round_display}}
+					<ul>
+						<li ng-repeat="game in round.games | filter:gamesQuery | filter:gamesQuery2">
+							{{game.team_a.live_abbr | gameHighlight }} vs. {{game.team_b.live_abbr | gameHighlight }}
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

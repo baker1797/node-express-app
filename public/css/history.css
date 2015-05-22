@@ -1,0 +1,27 @@
+.flip-wrap {
+  -webkit-perspective: 700;
+          perspective: 700;
+}
+.bakagain_history_wrap {
+  color: #333;
+  background: #900;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 4px;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.bakagain_history_list {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+/*
+http://leveluptuts.com/tutorials/css-experiments/css-experiments-2-card-flipping-effect-part-2
+*/
+.bakagain_history_wrap:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}

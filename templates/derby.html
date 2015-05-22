@@ -1,0 +1,29 @@
+<style type="text/css">
+	canvas {
+		position: absolute;
+		border: 10px solid #666;
+		margin-left: -300px;
+		left: 50%;
+	}
+</style>
+
+<div style="max-width: 1000px; width: 750px; padding: 20px; margin: auto;">
+	<button id="startGame" style="margin: auto;">start</button>
+	<button id="btn-pitch-js" style="margin: auto;">Pitch</button>
+	<form action="" id="bg_switcher">
+		<input type="radio" name="stadium" value="phillies" checked>Phillies<br>
+		<input type="radio" name="stadium" value="red_sox">Red Sox<br>
+		<input type="radio" name="stadium" value="nationals">Nationals<br>
+	</form>
+
+	<canvas id="derbyCanvas" width="600" height="400" style="background: url( img/bg_stadium-phillies.jpg ); background-size: cover;">
+	Your browser does not support the HTML5 canvas tag.</canvas>
+
+	<canvas id="pitchCanvas" width="600" height="400" style="background: transparent;">
+	Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+
+<div style="text-align: center; top: 0; position: absolute;">
+	<button id="startRAF">Start</button>
+	<button id="stopRAF">Stop</button>
+</div>

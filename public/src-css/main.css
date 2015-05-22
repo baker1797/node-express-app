@@ -1,0 +1,16 @@
+
+@import 'history.css';
+
+body {
+	background: #ececec;
+	font-family: Helvetica;
+	margin: 14px;
+}
+
+p {
+	font-size: 12px;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}

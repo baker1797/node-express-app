@@ -1,0 +1,42 @@
+//@import 'styl/variables.styl'
+//@import 'styl/mixins.styl'
+
+c_primary = #900
+c_body    = #333
+
+border-radius( radius = 5px, padding = 10px 4px )
+	//-webkit-border-radius 5px
+	border-radius radius
+	padding padding
+	
+cf()
+	zoom 1
+	
+	&:after,
+	&:before
+		content ''
+		display table
+	&:after
+		clear both
+
+
+.flip-wrap
+	perspective 700
+	
+.bakagain_history_wrap
+	color c_body
+	background c_primary
+	box-sizing border-box
+	width 200px
+	border-radius( 10px )
+	transition all .5s ease
+	transform-style preserve-3d
+
+.bakagain_history_list
+	backface-visibility hidden
+/*
+http://leveluptuts.com/tutorials/css-experiments/css-experiments-2-card-flipping-effect-part-2
+*/
+
+.bakagain_history_wrap:hover
+	transform rotateY(180deg)

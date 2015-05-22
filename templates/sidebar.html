@@ -1,0 +1,98 @@
+
+<html>
+<head>
+	<title>Sidebar - Node Express Site</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sandbox.css">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="top-nav">
+			<span class="sidebar-toggle sidebar-toggle-open"></span>
+			<h3 class="title"><img src="https://www.nuvonium.com/_image_lib/blog/phillieslogoII.png"><!--Site Title--></h3>
+		</nav>
+
+		<aside class="sidebar">
+			<!--<span class="sidebar-toggle sidebar-toggle-close">[ x ]</span>-->
+			<h4>Menu</h4>
+			<ul class="nav-list">
+				{{#each locals.menu_items}}
+					<li class="nav-item">{{this}}</li>
+				{{/each}}
+			</ul>
+		</aside>
+
+		<section>
+			{{ fewaf}}
+			<p>Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around. Plenty of text to go around.</p>
+		</section>
+
+		<section class="player_card_wrap">
+			<div class="player_card">
+				<div class="player_card_front">
+					
+				</div>
+				<div class="player_card_back">
+					<table class="player_card_stats">
+						<tr>
+							<td class="label">AVG:</td>
+							<td class="value">.330</td>
+						</tr>
+						<tr>
+							<td class="label">R:</td>
+							<td class="value">33</td>
+						</tr>
+						<tr>
+							<td class="label">RBI:</td>
+							<td class="value">29</td>
+						</tr>
+						<tr>
+							<td class="label">HR:</td>
+							<td class="value">8</td>
+						</tr>
+						<tr>
+							<td class="label">SB:</td>
+							<td class="value">10</td>
+						</tr>
+					</tr>
+					</table>
+				</div>
+			</div>
+			{{#each locals.players}}
+				<div class="player_card">
+					<div class="player_card_front" style="background-image: url('{{this}}');">
+						
+					</div>
+					<div class="player_card_back">
+						<table class="player_card_stats">
+							<tr>
+								<td class="label">AVG:</td>
+								<td class="value">.330</td>
+							</tr>
+							<tr>
+								<td class="label">R:</td>
+								<td class="value">33</td>
+							</tr>
+							<tr>
+								<td class="label">RBI:</td>
+								<td class="value">29</td>
+							</tr>
+							<tr>
+								<td class="label">HR:</td>
+								<td class="value">8</td>
+							</tr>
+							<tr>
+								<td class="label">SB:</td>
+								<td class="value">10</td>
+							</tr>
+						</tr>
+						</table>
+					</div>
+				</div>
+			{{/each}}
+		</section>
+	</div>
+</body>
+</html>
